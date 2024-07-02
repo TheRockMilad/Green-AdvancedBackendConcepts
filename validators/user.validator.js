@@ -25,8 +25,7 @@ const userValidator = () => {
     body("phone")
       .isMobilePhone(["fa-IR"])
       .withMessage("شماره تماس وارد شده معتبر نمی‌باشد")
-      .not()
-      .isEmpty()
+      .notEmpty()
       .withMessage("نمیتواند خالی باشه "),
 
     body("password")

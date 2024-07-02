@@ -9,5 +9,18 @@ const courseValidator = () => {
       .withMessage("عنوان دوره باید بین 3 تا 10 کاراکتر باشه"),
   ];
 };
-
 module.exports = { courseValidator };
+
+// مدل دوم و با کلاس 
+
+// module.exports = new (class {
+//   courseValidator() {
+//     return [
+//       body("title")
+//         .notEmpty()
+//         .withMessage("عنوان دوره نمی‌تونه خالی باشه")
+//         .isLength({ min: 3, max: 10 })
+//         .withMessage("عنوان دوره باید بین 3 تا 10 کاراکتر باشه"),
+//     ];
+//   }
+// })();
