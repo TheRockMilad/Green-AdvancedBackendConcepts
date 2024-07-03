@@ -1,6 +1,6 @@
 const express = require("express");
-const coursesController = require("./../controllers/course");
-const { courseValidator } = require("../validators/course.validator");
+const coursesController = require("./course.controller");
+const { courseValidator } = require("./../../utils/validators/course.validator");
 
 const router = express.Router();
 

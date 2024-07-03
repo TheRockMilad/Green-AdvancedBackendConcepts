@@ -1,6 +1,6 @@
-const { validationResult } = require("express-validator");
+// const { validationResult } = require("express-validator");
 const Joi = require("joi");
-const { userValidatorSchema } = require("../validators/user.validator");
+const { userValidatorSchema } = require("../../utils/validators/user.validator");
 
 exports.siqnUp = async (req, res) => {
   //express-validator

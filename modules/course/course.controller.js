@@ -1,4 +1,4 @@
-const coursesModel = require("./../models/course");
+const coursesModel = require("./course.models");
 const { validationResult } = require("express-validator");
 
 exports.create = async (req, res) => {
