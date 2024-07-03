@@ -2,6 +2,8 @@ const express = require("express");
 const path = require("path");
 const coursesRouter = require("./routes/course");
 const usersRouter = require("./routes/user");
+const cookieRouter = require("./routes/cookie");
+const cookieParser = require('cookie-parser')
 const flash = require("express-flash");
 const session = require("express-session");
 require("./configs/db");
@@ -24,6 +26,7 @@ app.use(flash());
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cookieParser())
 
 app.set("view engine", "ejs");
 
@@ -31,6 +34,7 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use("/courses", coursesRouter);
 app.use("/auth", usersRouter);
+app.use("/cookie", cookieRouter);
 
 app.listen(3000, () => {
   console.log("Server running on port 3000");
