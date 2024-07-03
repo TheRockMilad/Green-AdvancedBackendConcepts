@@ -3,6 +3,15 @@ const express = require("express");
 
 const router = express.Router();
 
+// session
+router.get("/", (req,res) =>{
+    req.session.counter += 1
+    req.session.name = "milad"
+    console.log(req.session);
+    //توی هر مرورگر بری یکی برای همین میسازه 
+    // و ارتباطی با هم ندارند
+    res.json(`Loaded ${req.session.counter} times`)
+});
 router.get("/set", (req,res) =>{
     res.cookie('teken',"kdslfjse8ef57eieiefj39",{
         httpOnly : true,
